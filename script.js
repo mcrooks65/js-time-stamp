@@ -22,4 +22,10 @@ var showCurrentTime = function()
     clock.innerText = clockTime;
 }
 
+var start = new Date();
+
+setInterval(function () {
+    showCurrentTime((new Date() - start) % 1000)
+}, 1000);
+
 document.onload = showCurrentTime();
