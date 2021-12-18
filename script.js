@@ -1,3 +1,5 @@
+var setAlarmButton = document.getElementById("setTimeStamp")
+
 var showCurrentTime = function()
 {
     var clock = document.getElementById("clock");
@@ -29,3 +31,11 @@ setInterval(function () {
 }, 1000);
 
 document.onload = showCurrentTime();
+
+var setTimeStamp = function()
+{
+    var stampTime = new Date();
+    document.getElementById("TimeStamp").innerText = stampTime
+};
+
+setAlarmButton.addEventListener("click",setTimeStamp);
